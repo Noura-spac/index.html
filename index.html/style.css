@@ -1,0 +1,394 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: rgb(255, 252, 252);
+  color: rgb(157, 110, 110);
+ font-family: Arial, Helvetica, sans-serif;
+}
+.navbar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 12px;
+     background:transparent;
+    z-index: 3;
+}
+  
+.nav-container{
+  border-bottom: 1px solid rgba(255,255,255,0.35);
+  padding-bottom: 12px;
+}
+.navbar-brand{
+  color:white  ;
+  font-size: 32px;
+  font-weight: 500;
+}
+.nav-link{
+  color: #ffffff;
+  margin-left: 30px;
+  font-size: 18px;
+}
+.hero{
+position: relative;
+width: 100%;
+height: 88vh;
+background-image: url(images/photo.Laveren.jpg);
+background-size: cover;
+background-position: center;
+display:flex;
+align-items: center;
+padding-left: 200px;
+}
+.overlay{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:rgba(0, 0, 0 , 0.15) ;
+  z-index: 1;
+  }
+  .hero-content{
+    position:relative ;
+    color: #ffffff;
+    max-width: 500px;
+    z-index: 2;
+  }
+
+.hero-content h1{
+font-size:60px;
+font-weight:bold;
+line-height: 1.1;
+
+}
+
+.hero-content p{
+margin:25px 0;
+line-height: 1.6;
+font-size:25px;
+
+}
+.hero-btn{
+display:inline-block;
+text-decoration:none;
+background:#ffffff;
+color:rgb(0, 0, 0);
+padding:14px 35px;
+border-radius:8px;
+font-size: 18px;
+transition:.3s;
+
+}
+
+.hero-btn:hover{
+background:#0f0f0f;
+color:white;
+}
+.shop-btn{
+    display: inline-block;
+    background: rgb(11, 11, 11);
+    color: rgb(246, 236, 236);
+    border: 1px solid black;
+    padding: 10px 20px;
+    text-decoration: none;
+   cursor: pointer;
+
+}
+.shop-btn:active{
+  background: rgb(255, 255, 255);
+  color: black;
+  transform: translateY(2px);
+}
+
+.perfume-card {
+border: none;
+border-radius: 15px;
+overflow: hidden;
+transition: 0.3s;
+width: 230px;
+margin: auto;
+}
+.perfume-card:hover{
+  transform: translateY(-8px);
+}
+.perfume-card img {
+  width: 200px;
+  height: 280px;
+  object-fit: cover;
+}
+.price {
+  color: #b9894e;
+  font-weight: 18px;
+  font-weight:bold;
+}
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: -420px;
+    width: 360px;
+    height: 100%;
+    background: white;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+    transition: 0.3s;
+    overflow-y: auto;
+    z-index: 1000;
+    padding: 35px;
+}
+
+
+.cart-header{
+  display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 20px;
+}
+#close-cart{
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+
+#claer-cart{
+  width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 8px;
+    background: #dc3545;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#clear-cart{
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 8px;
+    background: #dc3545;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#clear-cart:hover{
+    background: #bb2d3b;
+}
+#cart-sidebar h3{
+  font-size: 24px;
+  font-weight: 500;
+    margin-top: 20px;
+    text-align: center;
+    color: #333;
+}
+.cart-item{
+display: flex;
+align-items: center;
+gap: 15px;
+padding: 15px 0;
+border-bottom: 1px solid #ececec;
+}
+
+
+.cart-img{
+  
+   width: 80px;
+    height: 80px;
+    object-fit:contain;
+    border-radius: 8px;
+    flex-shrink: 0;
+    padding: 14px 0;
+   
+}
+.cart-details{
+    flex: 1;
+}
+.cart-details h4{
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #222;
+}
+
+.cart-details p{
+    margin: 6px 0 12px;
+    font-size: 15px;
+    color: #666;
+}
+    
+    
+
+
+.cart-details{
+    flex: 1;
+}
+
+.cart-details h4{
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #222;
+}
+
+.cart-details p{
+    margin: 6px 0 12px;
+    font-size: 15px;
+    color: #666;
+}
+
+.quantity-box{
+    display: flex;
+    align-items: center;
+    width: 100px;
+    height: 36px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.quantity-box button{
+     width: 33px;
+    height: 36px;
+    border: none;
+    background: white;
+    font-size: 20px;
+    color: #555;
+    cursor: pointer;
+}
+.quantity-box button:hover{
+    background: #fff6f6;
+}
+.quantity-box span{
+     flex: 1;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+    
+
+
+.cart-details{
+    flex: 1;
+}
+
+.cart-details h4{
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #222;
+}
+
+.cart-details p{
+    margin: 6px 0 12px;
+    font-size: 15px;
+    color: #666;
+}
+
+.quantity-box{
+    display: flex;
+    align-items: center;
+    width: 100px;
+    height: 36px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.quantity-box button{
+    width: 33px;
+    height: 36px;
+    border: none;
+    background: white;
+    font-size: 20px;
+    color: #555;
+    cursor: pointer;
+}
+
+.quantity-box button:hover{
+    background: #f8f7f7;
+}
+
+.quantity-box span{
+    flex: 1;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.remove-btn{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: transparent;
+    border: none;
+    font-size: 28px;
+    color: #666;
+    cursor: pointer;
+}
+
+
+
+#total-price{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+#clear-cart{
+    width: 100%;
+    margin-top: 20px;
+    background: #111;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#clear-cart:hover{
+    background: #000;
+}
+
+ #cart-item{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+ .toast{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #4f8b60;
+    color: #fff;
+    padding: 14px 20px;
+    border-radius: 8px;
+    font-size: 15px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: all .3s ease;
+    z-index: 3000;
+}
+
+.toast.show{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}

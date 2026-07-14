@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- bootstrap css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+  <title>product-card</title>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+
+    <div class="container nav-container">
+
+      <a class="navbar-brand fw-bold fs-3" href="#">
+        Laverne
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+
+        <span class="navbar-toggler-icon"></span>
+
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Perfumes</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact Us</a>
+            <li class="nav-itme">
+              <a class="nav-link" href="#" id="cart-icon">
+                  <i class="fa-solid fa-cart-shopping"></i>
+            <span id="cart-count">0</span>
+              </a>
+            </li>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </nav>
+  <!-- Hero Section -->
+  <section class="hero">
+
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+
+      <h1>Discover <br>Your Perfect<br> Perfume</h1>
+
+      <p>
+        Luxury fragrances crafted to leave a lasting impression.
+      </p>
+      <a href="#products" class="hero-btn">
+        Shop Now
+      </a>
+    </div>
+
+  </section>
+  <section id="products" class="products">
+    <div class="container py-5">
+      <h2 class="text-center  mb-5">Our Perfumes</h2>
+      <div class="row g-4">
+
+        <!-- المنتج الأول -->
+        <div class="col-lg-3 col-md-6">
+          <div class="card perfume-card">
+            <img src="./images/photo2.jpg" class="card-img-top" alt="Perfume">
+
+            <div class="card-body text-center">
+              <h5 class="card-title">Velvet Rose</h5>
+              <p class="price">250 SAR</p>
+              <a href="#" class="shop-btn" data-name="Velvet Rose"
+              data-price="250"
+              data-image="./images/photo2.jpg">
+                Add to cart
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- المنتج الثاني -->
+        <div class="col-lg-3 col-md-6">
+          <div class="card perfume-card">
+            <img src="./images/Green.jpg" class="card-img-top" alt="Perfume">
+
+            <div class="card-body text-center">
+              <h5 class="card-title">Black Musk</h5>
+              <p class="price">320 SAR</p>
+              <a href="#" class="shop-btn" data-name="Balck Musk"
+              data-price="320"
+              data-image="./images/Green.jpg">
+                Add to cart 
+
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- المنتج الثالث -->
+        <div class="col-lg-3 col-md-6">
+          <div class="card perfume-card">
+            <img src="./images/Rad.jpg" class="card-img-top" alt="Perfume">
+
+            <div class="card-body text-center">
+              <h5 class="card-title">Golden Amber</h5>
+              <p class="price">290 SAR</p>
+              <a href="#" class="shop-btn" data-name="Golden Amber"
+              data-price="290"
+              data-image="./images/Rad.jpg">
+                Add to cart
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- المنتج الرابع -->
+        <div class="col-lg-3 col-md-6">
+          <div class="card perfume-card">
+            <img src="./images/Brown.jpg" class="card-img-top" alt="Perfume">
+
+            <div class="card-body text-center">
+              <h5 class="card-title">White Oud</h5>
+              <p class="price">350 SAR</p>
+              <a href="#" class="shop-btn" data-name="White Oud"
+              data-price="350"
+              data-image="./images/Brown.jpg">
+              
+                Add to cart
+              </a>
+
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <div id="cart-sidebar" class="cart-sidebar">
+
+    <div class="cart-header">
+        <h2>Your Cart</h2>
+        <button id="close-cart">&times;</button>
+    </div>
+
+    <ul id="cart-items"></ul>
+
+    <h3>Total: <span id="total-price">0</span> SAR</h3>
+
+    <button id="clear-cart">Clear Cart</button>
+
+</div>
+
+</div>
+
+  </div>
+  
+  <div id="cart-sidebar" class="cart-sidebar">
+</div>
+
+<div id="toast" class="toast">
+    ✓ added to cart
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="app.js"></script>
+</div>
+</body>
+</html>
